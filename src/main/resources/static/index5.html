@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>非模块化方式使用layui</title>
+        <link rel="stylesheet" href="layuiTool/css/layui.css">
+    </head>
+    <body>
+
+    <!-- 你的HTML代码 -->
+
+        <script src="layuiTool/layui.all.js"></script>
+        <script>
+
+            ;!function(){
+                /**
+                 * 本地存储
+                 */
+                //增
+                layui.data('test',{
+                    key:'nickname',
+                    value:'老王'
+                });
+                layui.data('test',{
+                    key:'nickname1',
+                    value:'老张'
+                })
+
+                var localTest1 = layui.data('test');
+                console.log(localTest1.nickname);
+
+                //改
+                layui.data('test',{
+                    key:'nickname',
+                    value:'老李'
+                });
+
+                var localTest2 = layui.data('test');
+                console.log(localTest2.nickname);
+
+                //删一条数据
+                layui.data('test',{
+                    key:'nickname',
+                    remove:true
+                });
+
+                var localTest3 = layui.data('test');
+                console.log(localTest3);
+                console.log(localTest3.nickname);
+
+                //删test表
+                layui.data('test',null);
+                var localTest4 = layui.data('test');
+                console.log(localTest4);
+                console.log(localTest4.nickname);
+
+                /**
+                 * 获取设备信息
+                 */
+                var device = layui.device();
+                console.log(device);
+
+                var device = layui.device('myapp');
+                console.log(device);
+                if(device.myapp){
+                    alert('在我的App环境');
+                }else{
+                    alert('不在');
+                }
+
+
+            }();
+        </script>
+    </body>
+</html>

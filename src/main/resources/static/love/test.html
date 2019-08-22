@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>来来来，玩玩</title>
+    <link rel="stylesheet" href="/layui/layui/css/layui.css"  media="all">
+    <script src="/layui/js/jquery.min.js"></script>
+    <script src="/layui/layui/layui.js" charset="utf-8"></script>
+    <script src="/layui/js/modules/test.js" charset="utf-8"></script>
+
+</head>
+<body background="/layui/love/img/2.jpg">
+    <div class="site-demo-button" id="layerDemo1" style="margin-bottom: 0;">
+        <button type="button" class="layui-btn layui-btn-radius" onmouseover="yes1();" id="yes2" style="margin-left: 840px;margin-top: 55px; position: absolute; display: none;color: #FFB800;background-color: #B52F00"><i class="layui-icon layui-icon-face-smile">不是</i></button>
+        <!--<button type="button" class="layui-btn layui-btn-radius" onmouseover="yes3();" id="yes3" style="margin-left: 1215px;margin-top: 90px; position: absolute; display: none;color: #FFB800;background-color: #C13B08"><i class="layui-icon layui-icon-face-smile">是</i></button>-->
+        <!--<button type="button" class="layui-btn layui-btn-radius" onmouseover="yes4();" id="yes4" style="margin-left: 10px;margin-top: 137px; position: absolute; display: none;color: #FFB800;background-color: #7E110C"><i class="layui-icon layui-icon-face-smile">是</i></button>-->
+        <button type="button" data-method="setTop" class="layui-btn layui-btn-radius" id="yes5" style="margin-left: 890px;margin-top: 337px; position: absolute; display: none;color: #FFB800;background-color: #EEE119"><i class="layui-icon layui-icon-face-smile">不是</i></button>
+        <button type="button" class="layui-btn layui-btn-radius" id="yes7" onmouseover="yes6();" style="margin-left:auto;margin-top:auto;position: absolute; display: none;color: #FFB800;background-color: #EEE119"><i class="layui-icon layui-icon-face-smile">是</i></button>
+    </div>
+    <!-- 你的HTML代码 -->
+    <div class="layui-card" id="win1" style="width: 250px;height: 170px;background: none;margin-top: 347px;margin-left: 270px;position: absolute;display: block">
+        <!--<div class="layuiTool-card-header">卡片面板</div>-->
+        <div class="layui-card-body" style="text-align: center">
+            <div>
+                你是不是很无聊？？？
+            </div>
+            <div class="site-demo-button" id="layerDemo2" style="margin-top: 20px;margin-bottom: 0;">
+                <button type="button" class="layui-btn layui-btn-radius layui-btn-danger" data-method="confirmTrans" style="float: right"><i class="layui-icon layui-icon-face-cry">是</i></button>
+                <button type="button" class="layui-btn layui-btn-radius layui-btn-warm" onmouseover="yes1();" id="yes1" style="margin-left: 10px; display: block;color: #FFB800;background-color: #E17E09"><i class="layui-icon layui-icon-face-smile">不是</i></button>
+            </div>
+        </div>
+    </div>
+    <div class="layui-card" id="win2" style="width: 250px;height: 170px;background: none;margin-top: 347px;margin-left: 470px;position: absolute;display: none">
+        <!--<div class="layuiTool-card-header">卡片面板</div>-->
+        <div class="layui-card-body" style="text-align: center">
+            <div>
+                你是不是妞？
+            </div>
+            <div class="site-demo-button" id="layerDemo3" style="margin-top: 20px;margin-bottom: 0;">
+                <button type="button" class="layui-btn layui-btn-radius layui-btn-danger" data-method="offset" data-type="auto" style="float: right"><i class="layui-icon layui-icon-face-cry">不是</i></button>
+                <button type="button" class="layui-btn layui-btn-radius layui-btn-warm" onmouseover="yes6();" id="yes6" style="margin-left: 10px; display: block;color: #FFB800;background-color: #E17E09"><i class="layui-icon layui-icon-face-smile">是</i></button>
+            </div>
+        </div>
+    </div>
+
+    <!--<div style="margin-left: 700px;margin-top: 150px;">-->
+        <!--<img src="/layui/love/img/laoshu.jpeg" style="width: 200px;height: 200px">-->
+    <!--</div>-->
+</body>
+</html>

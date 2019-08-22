@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>非模块化方式使用layui</title>
+        <link rel="stylesheet" href="layuiTool/css/layui.css">
+    </head>
+    <body>
+
+    <!-- 你的HTML代码 -->
+
+        <script src="layuiTool/layui.all.js"></script>
+        <script>
+
+            ;!function(){
+                //无需再执行layui.use()方法加载模块，直接使用即可
+                var form = layui.form,layer = layui.layer;
+
+                layer.msg('Hello World');
+            }();
+        </script>
+    </body>
+</html>
