@@ -1,0 +1,12 @@
+server:
+  port: 8585
+  servlet:
+    context-path: /layui
+
+
+#beetl模板相关配置
+beetl:
+  suffix: html      #配置beetl模板后缀
+#  templatesPath: templates    #配置beetl模板根目录
+#beetl-beetlsql:
+#  dev: true     #自动检查模板变化
