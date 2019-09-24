@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.dao.AreaDao">
+
+    <!--  -->
+    <insert id="insertArea" useGeneratedKeys="true" keyProperty="areaId" keyColumn="area_id"  parameterType="com.example.entity.Area">
+        insert into
+        tb_area(area_name,priority,create_time,last_time)
+        values(#{areaName},#{priority},#{createTime},#{lastTime})
+    </insert>
+
+    <!--  -->
+    <delete id="deleteArea" parameterType="com.example.entity.Area">
+        delete from tb_area
+        where area_id = #{areaId}
+    </delete>
+
+    <!--  -->
+    <update id="updateArea" parameterType="com.example.entity.Area">
+        update tb_area
+        <set>
+            <if test="areaName != null">
+                area_name = #{areaName},
+            </if>
+            <if test="priority != null">
+                priority = #{priority},
+            </if>
+            <if test="lastTime != null">
+                last_time = #{lastTime}
+            </if>
+        </set>
+        where area_id = #{areaId}
+    </update>
+
+    <!--  -->
+    <select id="queryArea" resultType="com.example.entity.Area">
+        select area_id,area_name,priority,create_time,last_time
+        from tb_area
+        order by area_id desc
+    </select>
+    <!--  -->
+    <select id="queryAreaById" resultType="com.example.entity.Area">
+        select area_id,area_name,priority,create_time,last_time
+        from tb_area
+        where area_id = #{areaId}
+    </select>
+
+</mapper>

@@ -10,3 +10,15 @@ beetl:
 #  templatesPath: templates    #配置beetl模板根目录
 #beetl-beetlsql:
 #  dev: true     #自动检查模板变化
+
+
+jdbc:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+  username: root
+  password: root
+
+# mybatis配置
+mybatis_Config_file_path: mybatis-config.xml
+mapper_path: /mapper/**.xml
+entity_package: com.example.entity
